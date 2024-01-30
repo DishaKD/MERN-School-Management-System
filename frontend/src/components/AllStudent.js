@@ -21,7 +21,37 @@ function AllStudent() {
   return (
     <div className="container">
       <h1>AllStudent</h1>
-      <p></p>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Extra</th>
+          </tr>
+        </thead>
+        <tbody>
+          {students.map((user, index) => {
+            return (
+              <tr key={index}>
+                <td>{user.name}</td>
+                <td>{user.age}</td>
+                <td>{user.gender}</td>
+                <td>
+                  <button type="button" class="btn btn-outline-primary">
+                    Update
+                  </button>
+                  &nbsp; &nbsp;&nbsp;&nbsp;
+                  <button type="button" class="btn btn-outline-danger">
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }
