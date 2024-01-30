@@ -10,7 +10,9 @@ function App() {
     <Router>
       <div>
         <Header />
-        <AllStudent />
+        <Routes>
+          <Route path="/" exact element={<AllStudent />} />
+        </Routes>
         <Routes>
           <Route path="/add" exact element={<AddStudent />} />
         </Routes>
