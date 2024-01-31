@@ -40,9 +40,11 @@ function AllStudent() {
                   <td>{students.age}</td>
                   <td>{students.gender}</td>
                   <td>
-                    <button type="button" class="btn btn-outline-primary">
-                      Update
-                    </button>
+                    <a href={`/update/${students._id}`}>
+                      <button type="button" class="btn btn-outline-primary">
+                        Update
+                      </button>
+                    </a>
                     &nbsp; &nbsp;&nbsp;&nbsp;
                     <a href={`/delete/${students._id}`}>
                       <button type="button" class="btn btn-outline-danger">

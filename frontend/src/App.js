@@ -5,6 +5,7 @@ import AddStudent from "./components/AddStudent";
 import AllStudent from "./components/AllStudent";
 import DeleteStudent from "./components/DeleteStudent";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import UpdateStudent from "./components/UpdateStudent";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Routes>
           <Route path="/" exact element={<AllStudent />} />
           <Route path="/add" exact element={<AddStudent />} />
-          <Route path="/delete/:id" exact Component={DeleteStudent} />
+          <Route path="/delete/:id" exact element={<DeleteStudent />} />
+          <Route path="/update/:id" exact element={<UpdateStudent />} />
         </Routes>
       </div>
     </Router>
