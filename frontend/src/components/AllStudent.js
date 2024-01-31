@@ -32,24 +32,27 @@ function AllStudent() {
           </tr>
         </thead>
         <tbody>
-          {students.map((user, index) => {
-            return (
-              <tr key={index}>
-                <td>{user.name}</td>
-                <td>{user.age}</td>
-                <td>{user.gender}</td>
-                <td>
-                  <button type="button" class="btn btn-outline-primary">
-                    Update
-                  </button>
-                  &nbsp; &nbsp;&nbsp;&nbsp;
-                  <button type="button" class="btn btn-outline-danger">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
+          {students &&
+            students.map((students) => {
+              return (
+                <tr key={students._id}>
+                  <td>{students.name}</td>
+                  <td>{students.age}</td>
+                  <td>{students.gender}</td>
+                  <td>
+                    <button type="button" class="btn btn-outline-primary">
+                      Update
+                    </button>
+                    &nbsp; &nbsp;&nbsp;&nbsp;
+                    <a href={`/delete/${students._id}`}>
+                      <button type="button" class="btn btn-outline-danger">
+                        Delete
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+              );
+            })}
         </tbody>
       </table>
     </div>
