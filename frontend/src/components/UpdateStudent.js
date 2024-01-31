@@ -34,7 +34,7 @@ export default function UpdateStudent() {
     axios
       .put(`http://localhost:8070/student/update/${id}`, updateStudent)
       .then(() => {
-        alert("Student Updated");
+        alert("Student Updated Complete");
         navigate("/");
       })
       .catch((err) => {
